@@ -8,7 +8,7 @@
 - 비상업적 용도로 만들어진 포트폴리오용 사이트입니다.
 
 ### available pages
-- 
+- [웹사이트 첫 페이지](https://absolutelyfullycapable.github.io/zet)
 
 ### production period
 - 2020.11.18 - 
