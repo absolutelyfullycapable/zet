@@ -14,7 +14,8 @@
 - 2020.11.18 - 
 
 ### degree of participation
-- 웹사이트 메인 페이지 HTML 100%
+- 메인 페이지 HTML 작성 100%
+- 메인 페이지 내 사용된 이미지 및 비디오 서치, 제작 100%
 
 <br>
 copyright (c) 2020 Ji Hye LEE
