@@ -11,7 +11,7 @@
 - [웹사이트 첫 페이지](https://absolutelyfullycapable.github.io/zet)
 
 ### production period
-- 2020.11.18 - 
+- 2020.11
 
 ### degree of participation
 - 메인 페이지 HTML 작성 100%
