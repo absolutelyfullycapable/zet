@@ -26,6 +26,9 @@
         <meta name="msapplication-TileColor" content="#e31d1a">
         <meta name="theme-color" content="#ffffff">
         <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <!-- font-family:'Noto Sans KR', sans-serif; -->
         <!-- CSS 연결 -->
         <!-- 부트스트랩 -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -65,49 +68,68 @@
         <!-- main contents -->
         <div id="main">
             <section id="title">
-                <h2 style="display:none;"><img src="images/title.png" alt="title"></h2>
-                <h3>제트로 가면 새로운 일상이 열릴 거예요.</h3>
-                <p>
-                    제트는 더 많은 경험을 하고 더 많은 가능성을<br>
-                    제공하는 오픈 플랫폼으로 이동에 가치를 더해 주니까요.<br>
-                    제트로 달라진 일상을 경험해 보세요.
-                </p>
-                <div class="btn">
-                    <button type="button" class="btn btn-lg btn-default">Google Play</button>
-                    <button type="button" class="btn btn-lg btn-default">App Store</button>
-                </div>
-            </section>
+                <div class="video">
+                    <video src="video/title.mp4" muted loop autoplay poster="images/thumbnail.jpg">
+                        <source src="video/title.mp4" type="video/mp4">
+                        <source src="video/title.webm" type="video/webm">
+                    </video>
+                </div> <!-- video -->
+                <div class="txt">
+                    <h2 style="display:none;"><img src="images/title.png" alt="title"></h2>
+                    <h3>제트로 가면 새로운 일상이 열릴 거예요.</h3>
+                    <p>
+                        제트는 더 많은 경험을 하고 더 많은 가능성을<br>
+                        제공하는 오픈 플랫폼으로 이동에 가치를 더해 주니까요.<br>
+                        제트로 달라진 일상을 경험해 보세요.
+                    </p>
+                    <div class="btn_group">
+                        <button type="button" class="btn btn-lg btn-default">Google Play</button>
+                        <button type="button" class="btn btn-lg btn-default">App Store</button>
+                    </div>
+                </div> <!-- txt -->
+            </section> <!-- title -->
 
             <section id="how_to">
                 <h2>제트는 <span>어떻게</span> 이용하나요?</h2>
                 <p>가까운 거리를 빠르고 재미있게 이동해 보세요.</p>
+                <ul>
+                    <li>ZET 찾기</li>
+                    <li>ZET 대여</li>
+                    <li>ZET 출발</li>
+                    <li>ZET 주행</li>
+                    <li>ZET 주차</li>
+                    <li>ZET 반납</li>
+                </ul>
                 <p>ZET 주행하실 때 차량 및 보행자의 안전에 유의해 주세요.</p>
-            </section>
+            </section> <!-- how to -->
 
             <section id="caution">
                 <h2>ZET <span>이용 수칙</span></h2>
                 <p>ZET 이용 시, 안전을 위해 이것만은 꼭 지켜 주세요!</p>
-                <div class="btn">
+                <div class="btn_group">
                     <button type="button" class="btn btn-lg btn-default">탑승 전 확인하세요</button>
                     <button type="button" class="btn btn-lg btn-default">주행 중 유의하세요</button>
                 </div>
-            </section>
+            </section> <!-- caution -->
 
             <section id="location">
                 <h2>ZET는 <span>어디서</span> 이용할 수 있나요?</h2>
-                <p>ZET는 현재 제주도, 대전 카이스트에서 운영되고 있습니다. 점차적으로 ZET 서비스를 확대해나갈 예정입니다.</p>
-                <div class="btn">
+                <p>
+                    ZET는 현재 제주도, 대전 카이스트에서 운영되고 있습니다.<br>
+                    점차적으로 ZET 서비스를 확대해나갈 예정입니다.
+                </p>
+                <div class="btn_group">
                     <button type="button" class="btn btn-lg btn-default">제주도</button>
-                    <button type="button" class="btn btn-lg btn-default">대전 카이스트</button>
+                    <button type="button" class="btn btn-lg btn-default">대전<br>카이스트</button>
                 </div>
-            </section>
+            </section> <!-- location -->
 
             <section id="coupon">
                 <h2>ZET만의 <span>특별한 혜택,</span> 제휴된 상점의 쿠폰을 받으세요!</h2>
                 <p>ZET 서비스는 각 지역의 상점과 연계하여 쿠폰 서비스를 제공하고 있습니다. 저희 서비스와 제휴를 원하시는 분들은 제휴 문의를 통해 문의하실 수 있습니다.</p>
                 <img src="images/coupon_img.png" alt="coupon">
                 <button type="button" class="btn btn-lg btn-default">제휴 문의</button>
-            </section>
+            </section> <!-- coupon-->
         </div>
 
         <footer>
@@ -130,6 +152,6 @@
                 본 사이트는 비상업적 용도로 만들어진 포트폴리오용 사이트입니다.<br>
                 사이트 제작 시 사용된 일부 이미지의 라이센스는 ZET에게 있습니다.
             </p>
-        </footer>
+        </footer> <!-- footer -->
     </body>
 </html>
