@@ -65,6 +65,8 @@
             </div>
         </nav>
 
+        <div class="nav_bg"></div>
+
         <!-- main contents -->
         <div id="main">
             <section id="title">
@@ -75,7 +77,7 @@
                     </video>
                 </div> <!-- video -->
                 <div class="txt">
-                    <h2 style="display:none;"><img src="images/title.png" alt="title"></h2>
+                    <h2><img src="images/title.png" alt="title"></h2>
                     <h3>제트로 가면 새로운 일상이 열릴 거예요.</h3>
                     <p>
                         제트는 더 많은 경험을 하고 더 많은 가능성을<br>
@@ -90,29 +92,90 @@
             </section> <!-- title -->
 
             <section id="how_to">
+                <img src="images/how_to.png" alt="how_to">
                 <h2>제트는 <span>어떻게</span> 이용하나요?</h2>
                 <p>가까운 거리를 빠르고 재미있게 이동해 보세요.</p>
                 <ul>
-                    <li>ZET 찾기</li>
-                    <li>ZET 대여</li>
-                    <li>ZET 출발</li>
-                    <li>ZET 주행</li>
-                    <li>ZET 주차</li>
-                    <li>ZET 반납</li>
+                    <li>
+                        <a href="#">
+                            <svg viewBox="0 0 36 35" class="icon-howto01"><g fill="none" fill-rule="evenodd"><path d="M-2-2h40v40H-2z"></path><path d="M27.587 21.007c2.275-4.95 1.375-11.002-2.704-15.081-5.235-5.235-13.722-5.235-18.957 0-5.235 5.235-5.235 13.722 0 18.957 5.235 5.235 13.722 5.235 18.957 0L34.313 34" class="stroke" stroke="#757575" stroke-width="2.6"></path></g></svg>
+                            <p>ZET 찾기</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg viewBox="0 0 35 35" class="icon-howto02"><g class="stroke" stroke="#757575" stroke-width="2.3" fill="none" fill-rule="evenodd"><path d="M1.17 12.233h10.11V2.123H1.17zM1.17 33.494h10.11v-10.11H1.17zM22.943 12.233h10.11V2.123h-10.11zM22.942 28.358v-10.11h10.11v10.11"></path><path d="M0 18.248h16.813v15.144h17.252M17.111 1V13.41"></path></g></svg>
+                            <p>ZET 대여</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg viewBox="0 0 37 37" class="icon-howto03"><g fill="none" fill-rule="evenodd"><path class="fill" fill="#757575" d="M29.612 19.263L9.298 19.2l.005-2 15.686.048-4.63-4.95 1.46-1.365zM21.828 25.657l-1.48-1.348 3.636-3.99h2.707z"></path><path d="M31.702 7.84A16.925 16.925 0 0 1 35.3 18.3c0 9.39-7.612 17-17 17-9.39 0-17-7.61-17-17 0-9.389 7.61-17 17-17 3.814 0 7.335 1.256 10.17 3.378" class="stroke" stroke="#757575" stroke-width="2.3"></path></g></svg>
+                            <p>ZET 출발</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg viewBox="0 0 44 36" class="icon-howto04"><g fill="none" fill-rule="evenodd"><path d="M9.788 30.212a3.975 3.975 0 1 1-7.953 0 3.975 3.975 0 0 1 7.953 0zM42.12 30.212a3.975 3.975 0 1 1-7.953 0 3.975 3.975 0 0 1 7.953 0zM13.142 29.722h13.674l9.264-9.772M37.283 26.236L33.803 7.37" class="stroke" stroke="#757575" stroke-width="2.3"></path><path d="M27.007 1l4.659 2.987"></path><path d="M27.007 1l4.659 2.987M30.999 25.31H12.122" class="stroke" stroke="#757575" stroke-width="2.3"></path></g></svg>
+                            <p>ZET 주행</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg viewBox="0 0 37 37" class="icon-howto05"><g class="stroke" stroke="#757575" fill="none" fill-rule="evenodd"><path d="M15.267 20.148h5.876a4.302 4.302 0 0 0 0-8.605H14.897v16.453" stroke-width="3"></path><path d="M29.125 31.236a16.47 16.47 0 0 1-10.59 3.835C9.406 35.071 2 27.667 2 18.536 2 9.403 9.404 2 18.536 2 27.669 2 35.07 9.403 35.07 18.536c0 3.555-1.121 6.85-3.03 9.546" stroke-width="2.3"></path></g></svg>
+                            <p>ZET 주차</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg viewBox="0 0 43 37" class="icon-howto06"><g class="stroke" stroke="#757575" fill="none" fill-rule="evenodd"><path stroke-width="2.3" d="M34.261 13.903v19.452H4.893V8.882h30.024M20.082 24.16v-6.922M2 8.88h35.81V2H2z"></path><path stroke-width="2" class="fill" fill="#FFF" d="M27.817 35.03h14.178v-4.596H27.817z"></path><path stroke-width="2" class="fill" fill="#FFF" d="M25.987 31.38h14.178v-4.595H25.987z"></path><path stroke-width="2" class="fill" fill="#FFF" d="M27.816 23.136h14.178v4.596H27.816v-2.851"></path></g></svg>
+                            <p>ZET 반납</p>
+                        </a>
+                    </li>
                 </ul>
-                <p>ZET 주행하실 때 차량 및 보행자의 안전에 유의해 주세요.</p>
+                <p class="description">ZET 주행하실 때 차량 및 보행자의 안전에 유의해 주세요.</p>
             </section> <!-- how to -->
 
             <section id="caution">
+                <img src="images/caution.png" alt="caution">
                 <h2>ZET <span>이용 수칙</span></h2>
                 <p>ZET 이용 시, 안전을 위해 이것만은 꼭 지켜 주세요!</p>
                 <div class="btn_group">
                     <button type="button" class="btn btn-lg btn-default">탑승 전 확인하세요</button>
                     <button type="button" class="btn btn-lg btn-default">주행 중 유의하세요</button>
                 </div>
+                <ul class="before">
+                    <li>
+                        <img src="images/before1.png" alt="before_1">
+                        <p>탑승 정원은 ZET 1대당 1명씩</p>
+                    </li>
+                    <li>
+                        <img src="images/before2.png" alt="before_2">
+                        <p>인도에서는 타면 안 돼요!</p>
+                    </li>
+                    <li>
+                        <img src="images/before3.png" alt="before_3">
+                        <p>킥보드 사용은 운전면허가 필수!</p>
+                    </li>
+                </ul>
+                <ul class="riding">
+                    <li>
+                        <img src="images/riding1.png" alt="riding_1">
+                        <p>헬멧은 반드시 착용</p>
+                    </li>
+                    <li>
+                        <img src="images/riding2.png" alt="riding_2">
+                        <p>음주 상태에서 이용 금지</p>
+                    </li>
+                    <li>
+                        <img src="images/riding3.png" alt="riding_3">
+                        <p>주행 중 이어폰 사용 금지</p>
+                    </li>
+                </ul>
             </section> <!-- caution -->
 
             <section id="location">
+                <img src="images/location.png" alt="location">
                 <h2>ZET는 <span>어디서</span> 이용할 수 있나요?</h2>
                 <p>
                     ZET는 현재 제주도, 대전 카이스트에서 운영되고 있습니다.<br>
@@ -125,12 +188,22 @@
             </section> <!-- location -->
 
             <section id="coupon">
+                <img src="images/coupon.png" alt="coupon">
                 <h2>ZET만의 <span>특별한 혜택,</span> 제휴된 상점의 쿠폰을 받으세요!</h2>
-                <p>ZET 서비스는 각 지역의 상점과 연계하여 쿠폰 서비스를 제공하고 있습니다. 저희 서비스와 제휴를 원하시는 분들은 제휴 문의를 통해 문의하실 수 있습니다.</p>
+                <p>
+                    ZET 서비스는 각 지역의 상점과 연계하여 쿠폰 서비스를 제공하고 있습니다.<br>
+                    저희 서비스와 제휴를 원하시는 분들은 제휴 문의를 통해 문의하실 수 있습니다.
+                </p>
                 <img src="images/coupon_img.png" alt="coupon">
                 <button type="button" class="btn btn-lg btn-default">제휴 문의</button>
             </section> <!-- coupon-->
-        </div>
+
+            <section id="box">
+                <div class="bg_box1"></div>
+                <div class="bg_box2"></div>
+                <div class="bg_box3"></div>
+            </section> <!-- box -->
+        </div> <!-- main -->
 
         <footer>
             <ul>
