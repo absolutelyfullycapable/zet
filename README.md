@@ -15,7 +15,8 @@
 
 ### degree of participation
 - 메인 페이지 HTML 작성 100%
-- 메인 페이지 내 사용된 이미지 및 비디오 서치, 제작 100%
+- 메인 페이지 내 사용된 이미지 및 비디오 서치 및 제작
+- favicon, open graph 및 twitter card image 제작
 
 <br>
 copyright (c) 2020 Ji Hye LEE
