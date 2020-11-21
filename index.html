@@ -30,8 +30,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
         <!-- font-family:'Noto Sans KR', sans-serif; -->
         <!-- CSS 연결 -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="common/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/index.css">
         <!-- JS/jQuery 연결 -->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
@@ -64,6 +64,7 @@
         </nav>
 
         <div class="nav_bg"></div>
+        <!-- 모바일 화면에서 내비게이션 아이콘 클릭 시 배경 어두워지게 만드는 역할 -->
 
         <!-- main contents -->
         <div id="main">
@@ -97,8 +98,15 @@
                     이동해 보세요.
                 </p>
                 <div class="how_to_slide">
-                    
-                </div>
+                    <div class="how_to_img">
+                        <img src="images/how_to_1.jpg" alt="how_to_1">
+                        <img src="images/how_to_2.jpg" alt="how_to_2">
+                        <img src="images/how_to_3.jpg" alt="how_to_3">
+                        <img src="images/how_to_4.jpg" alt="how_to_4">
+                        <img src="images/how_to_5.jpg" alt="how_to_5">
+                        <img src="images/how_to_6.jpg" alt="how_to_6">
+                    </div>
+                </div> <!-- how to slide -->
                 <ul>
                     <li>
                         <a href="#">
@@ -144,14 +152,16 @@
                 <img src="images/caution.png" alt="caution">
                 <h2>ZET <span>이용 수칙</span></h2>
                 <p>ZET 이용 시, 안전을 위해 이것만은 꼭 지켜 주세요!</p>
+
                 <div class="btn_group_m">
                     <button type="button" class="btn btn-lg btn-default">탑승 전 확인하세요</button>
                     <button type="button" class="btn btn-lg btn-default">주행 중 유의하세요</button>
-                </div>
+                </div> <!-- btnr group mobile (모바일 환경에서 나타나는 버튼) -->
                 <div class="btn_group_pc">
                     <button type="button" class="btn btn-lg btn-default"></button>
                     <button type="button" class="btn btn-lg btn-default"></button>
-                </div>
+                </div> <!-- btnr group pc (PC 환경에서 나타나는 버튼) -->
+
                 <p class="pc_notification">탑승 전 확인하세요!</p>
                 <ul class="before">
                     <li>
@@ -167,6 +177,12 @@
                         <p>킥보드 사용은 운전면허가 필수!</p>
                     </li>
                 </ul>
+                <div class="pagnation_m_bf">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div> <!-- pagnation (mobile) before section -->
+
                 <p class="pc_notification">주행 중 유의하세요!</p>
                 <ul class="riding">
                     <li>
@@ -182,6 +198,16 @@
                         <p>주행 중 이어폰 사용 금지</p>
                     </li>
                 </ul>
+                <div class="pagnation_m">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div> <!-- pagnation (mobile) riding section -->
+
+                <div class="pagnation_pc">
+                    <div></div>
+                    <div></div>
+                </div> <!-- pagnation (pc) -->
             </section> <!-- caution -->
 
             <section id="location">
@@ -192,8 +218,15 @@
                     점차적으로 ZET 서비스를 확대해나갈 예정입니다.
                 </p>
                 <div class="map">
-
-                </div>
+                    <div class="daejeon">
+                        <div><!-- 여기 말풍선은 백그라운드 이미지로 location_pin.png 이거 쓰면 돼!! -->대전<br>카이스트</div>
+                        <a href="#"></a>
+                    </div>
+                    <div class="jeju"">
+                        <div><!-- 여기 말풍선은 백그라운드 이미지로 location_pin.png 이거 쓰면 돼!! -->제주도</div>
+                        <a href="#"></a>
+                    </div>
+                </div> <!-- map -->
                 <div class="btn_group">
                     <button type="button" class="btn btn-lg btn-default">제주도</button>
                     <button type="button" class="btn btn-lg btn-default">대전<br>카이스트</button>
@@ -238,6 +271,9 @@
                 본 사이트는 비상업적 용도로 만들어진 포트폴리오용 사이트입니다.<br>
                 사이트 제작 시 사용된 일부 이미지의 라이센스는 ZET에게 있습니다.
             </p>
+            <p>bizlab08@gmail.com</p>
+            <!-- 이메일 앞에 있는 이미지 email.png 이 파일로 쓰면 됩니다용 -->
+            <p>Copyright 2019 ZET All rights reserved.</p>
         </footer> <!-- footer -->
     </body>
 </html>
