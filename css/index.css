@@ -30,7 +30,7 @@ button::after, .btn_group a::after {content: ''; display: block; position: absol
 .navbar-default .container .navbar-collapse ul li a.support {width: 103px; background: url(../images/img_menu_support.png) no-repeat left top/contain;}
 
 /* javascript part - 모바일 화면에서 내비게이션 버튼 클릭 시 어두운 배경 */
-.nav_bg {position: fixed; top:0; left:0; z-index:1; width:100%; height:100%; background-color:#000; opacity:0.6; display: none;}/* display:none으로 숨겨둘게용 가현언니~ */
+.nav_bg {position: fixed; top:0; left:0; z-index:2; width:100%; height:100%; background-color:#000; opacity:0.6; display: none;}/* display:none으로 숨겨둘게용 가현언니~ */
 
 /* logo */
 .navbar-default .navbar-brand {width: 48px; height: 24px; margin-left: 24px; padding: 0; position: absolute; top:24px;}
@@ -154,6 +154,7 @@ button::after, .btn_group a::after {content: ''; display: block; position: absol
     #main #location .map > div {position: absolute;}
     #main #location .map .jeju {bottom: 0; left: 0; width: 55px; height: 25px;}
     #main #location .map > div a {display: block; width: 100%; height: 100%;}
+    #main #location .map > div a div {display: none;} /*gh*/
     #main #location .map .daejeon {z-index:1; top:146px; left:62px; width: 16px; height: 16px;}
     /* location button */
     #main #location .btn_group .btn-lg {width: 91px; height: 60px; font-size: 16px;}
@@ -162,10 +163,10 @@ button::after, .btn_group a::after {content: ''; display: block; position: absol
     /* javascript part - 버튼 active 효과 */
     /* active시 버튼 + 지도 표시 변경 */
     #main #location .map .jeju.active {background: url(../images/jeju.png) no-repeat 4px bottom; background-size: 50px 24px;}
-    #main #location .map .jeju.active a div {width: 78px; padding:5px 0 17px; position: absolute; z-index: 2; top: -52px; left: 5px; background: url(../images/location_pin.png) no-repeat left top/contain; text-align: center; color:#fff; font-size: 18px; font-weight: 700;}
+    #main #location .map .jeju.active a div {width: 78px; padding:5px 0 17px; position: absolute; z-index: 2; top: -52px; left: 5px; background: url(../images/location_pin.png) no-repeat left top/contain; text-align: center; color:#fff; font-size: 18px; font-weight: 700; display: block;} /*gh-display*/
     #main #location .map .daejeon.active {background: url(../images/daejeon.png) no-repeat right bottom; background-size: 100%;}
-    #main #location .map .daejeon.active a div {width: 78px; padding: 3px 0 12px; position: absolute; z-index: 2; top: -51px; left: -22px; background: url(../images/location_pin.png) no-repeat left top/contain; text-align:center; color:#fff; font-size: 14px; font-weight: 700; line-height: 16px;}
-    #main #location .btn_group .btn-lg.active, #main #location .btn_group .btn-lg:focus, #main #location .btn_group .btn-lg:hover, #main #location .btn_group .btn-lg:active {color: #fff; font-weight: 500;}
+    #main #location .map .daejeon.active a div {width: 78px; padding: 3px 0 12px; position: absolute; z-index: 2; top: -51px; left: -22px; background: url(../images/location_pin.png) no-repeat left top/contain; text-align:center; color:#fff; font-size: 14px; font-weight: 700; line-height: 16px; display: block;} /*gh-display*/ 
+    #main #location .btn_group .btn-lg.active, #main #location .btn_group .btn-lg:focus, #main #location .btn_group .btn-lg:hover, #main #location .btn_group .btn-lg:active {color: #fff; font-weight: 500; outline: none;} /*gh-outline*/
     #main #location .btn_group .btn-lg.active::after, #main #location .btn_group .btn-lg:focus::after, #main #location .btn_group .btn-lg:hover::after, #main #location .btn_group .btn-lg:active::after {border-color: #E5150B; background-color: #E5150B; z-index: -1;}
     #main #location .btn_group .btn_jeju {margin-right: 14px;}
 
@@ -194,7 +195,7 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
     /* footer sub2 */
     footer .footer_sub2 {margin-top: 25px; color:#999;}
     /* license */
-    /* footer .license {margin-top: 25px; font-size: 13px;} */
+    footer .license {margin-top: 25px; font-size: 12px; line-height: 20px; color:#999;}
     /* email */
     footer .email {margin-top: 25px; padding-left: 22px; background: url(../images/icon_footer_email.png) no-repeat left 5px; background-size: 15px 11px; color: #999;}
     /* copyright */
@@ -357,9 +358,10 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
         /* how to slide Icon */
         #main #how_to .indicator {width: 1194px; margin-top: 40px;}
         #main #how_to .indicator li {padding-right: 48px;}
+        #main #how_to .indicator li:nth-child(4) {background: url(../images/how_to_next.png) no-repeat 91% center; background-size: 19px 13px;}
         #main #how_to .indicator li.active {padding-right: 48px; background-image: url(../images/how_to_next_on.png);}
         #main #how_to .indicator li:nth-child(3), #main #how_to .indicator li:nth-child(4) {padding-right: 48px;}
-        #main #how_to .indicator li:nth-child(4) {background: url(../images/how_to_next.png) no-repeat 91% center; background-size: 19px 13px;}
+        #main #how_to .indicator li:nth-child(6).active {background: none; padding-right: 0;}
         #main #how_to .indicator li:nth-child(5), #main #how_to .indicator li:nth-child(6) {margin: 0;}
         #main #how_to .indicator li a {width: 159px; height: 106px; font-size: 22px;}
         #main #how_to .indicator li a svg {width: 36px; height:35px; margin-top:17px;}
@@ -389,6 +391,7 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
                 /* btn group pc */
                 #main #caution .caution_icon .btn_group_pc {display: block; position: absolute; top: 52%; left: 50%; width: 100%; transform: translateX(-50%); display: flex; justify-content: space-between;}
                 #main #caution .caution_icon .btn_group_pc a {display: block; width: 54px; border: none; text-indent: -9999px;}
+                #main #caution .caution_icon .btn_group_pc a::after {display: none;}
                 #main #caution .caution_icon .btn_group_pc .prev {background: url(../images/btn_prev.png) no-repeat; background-size: contain;}
                 #main #caution .caution_icon .btn_group_pc .next {background: url(../images/btn_next.png) no-repeat; background-size: contain;}
 
@@ -423,7 +426,7 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
         footer {padding: 36px 0;}
         footer .footer_box {width: 1212px; margin: 0 auto; display: flex; flex-direction: column; align-items: flex-end;}
         /* customer service */
-        footer .footer_sub1 li {padding-left: 24px;}
+        footer .footer_sub1 li {padding-left: 24px; cursor: pointer;}
         footer .footer_sub1 li:nth-child(3), footer .footer_sub1 li:nth-child(5) {padding-left: 24px;}
         footer .footer_sub1 li::after {left: 11px; top: 4px;}
         /* company */
@@ -431,8 +434,10 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
         footer .footer_sub2 li {padding: 2px;}
         footer .footer_sub2 li:first-child {margin-right: 85px;}
         footer .footer_sub2 li:nth-child(3) {margin-right: 35px;}
+        /* license */
+        footer .license {width:400px; margin-top: 25px;}
         /* contact */
-        footer .contact {display: flex; width: 400px; margin-top: 10px;}
+        footer .contact {display: flex; width: 400px; margin-top: 25px;}
         footer .email {margin-right: 14px;}
         footer .email, footer .copyright {margin-top: 0;}
 }
