@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+/* basic font */
+body {font-family: 'Noto Sans KR','helvetica', 'AppleSDGothicNeoL00',sans-serif; color: #000;}
+body, html {letter-spacing: -0.4px;}
+
+/* initialization */
+body, header, nav, section, footer, h1, h2, h3, h4, h5, div, ul, li, p, strong, address {margin:0; padding:0; box-sizing:border-box;}
+ul, li {list-style:none;}
+a {text-decoration:none; color:#000;}
+
+/* button basic border style */
+button::after, .btn_group a::after {content: ''; display: block; position: absolute; top:0; left:50%; width: 97%; height: 100%; border:2px solid #fff; border-radius: 10px; font-size:13px; -webkit-transform: skew(-10deg,0deg) translateX(-50%); -ms-transform: skew(-10deg,0deg) translateX(-50%); transform: skew(-10deg,0deg) translateX(-50%); -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+/* initialize button effect */
+.btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default {color: inherit; background-color: transparent; border-color: inherit;}
+
+/*==============    Mobile      ==============*/
+
+/*---- Mobile header ----*/
+/* nav */
+.navbar-default {background-color: #fff;}
+.navbar-default .container .navbar-header {height: 72px; position: relative;}
+.navbar-default .container .navbar-collapse, .navbar-default .navbar-form {border: none; padding: 0;}
+.navbar-default .container .navbar-collapse ul {margin:15px 0 30px;}
+.navbar-default .container .navbar-collapse ul li {padding-left: 26px; margin-top:15px}
+.navbar-default .container .navbar-collapse ul li a {display:block; height: 19px; padding: 0; text-indent: -9999px;}
+.navbar-default .container .navbar-collapse ul li a.about {width: 103px; background: url(../images/img_menu_about.png) no-repeat left top/contain;}
+.navbar-default .container .navbar-collapse ul li a.pricing {width: 81px; background: url(../images/img_menu_pricing.png) no-repeat left top/contain;}
+.navbar-default .container .navbar-collapse ul li a.support {width: 103px; background: url(../images/img_menu_support.png) no-repeat left top/contain;}
+
+/* javascript part - 모바일 화면에서 내비게이션 버튼 클릭 시 어두운 배경 */
+.nav_bg {position: fixed; top:0; left:0; z-index:2; width:100%; height:100%; background-color:#000; opacity:0.6; display: none;}/* display:none으로 숨겨둘게용 가현언니~ */
+
+/* logo */
+.navbar-default .navbar-brand {width: 48px; height: 24px; margin-left: 24px; padding: 0; position: absolute; top:24px;}
+.navbar-default .navbar-brand svg {width: 100%; height: 100%;}
+
+/* mobile nav btn */
+.navbar-default .navbar-toggle {width: 20px; height: 20px; border: none; margin: 0; padding: 0; position: absolute; top:24px; right:24px;}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {background-color: transparent;}
+.navbar-default .navbar-toggle .btn-menu {margin-top: 5px; fill: #000;}
+.navbar-default button::after {display: none;}
+
+/* javascript part - 모바일 화면에서 내비게이션 버튼 X버튼 등장, display:none으로 일단 숨겨뒀어욥~ */
+.navbar-default .navbar-toggle .btn-menu-close {display: none;}
+
+/*---- Main----*/
+/* main */
+.main {height: 390px; background: url(../images/img_priceing_mobile.png) no-repeat ; background-size: cover; background-position: center center;}
+
+/* contents */
+.contents {margin:50px auto 0; position: relative; padding-bottom: 122px;}
+.contents .text_area {width: 290px; margin: 0 auto;}
+.contents .main_txt {font-size: 38px; line-height: 48px; font-weight: 900; padding-top: 34px;background: url(../images/icon_coin.png) no-repeat 0 0; background-size: 28px 28px; background-position: center top;}
+.contents .main_txt span {color: #E2231A;}
+.contents .second_txt {font-size: 14px; line-height: 22px; margin-top: 10px; }
+.contents .third_txt {font-size: 16px; line-height: 22px; margin: 25px auto 0; position: absolute; width: 250px; bottom: 60px; color: #757575; font-weight: 500;}
+
+.contents .price_box {margin-top: 30px; padding: 0 30px; font-weight: 500;}
+.contents .price_box .box_list {background: #f5f5f5; text-align: center; padding: 34px 52px 40px; border-radius: 25px;}
+.contents .price_box .box_list .img_box {width: 152px; height: 152px; margin: 0 auto;}
+.contents .price_box .box_list .img_box img {height: 100%;}
+.contents .price_box .box_list p {margin: 0;}
+.contents .price_box .box_list > p {margin-top: 33px; font-size: 18px;}
+
+.contents .price_box .box_list .price {margin-top: 27px; font-size: 12px; position: relative;}
+.contents .price_box .box_list .sec_price {margin-top: 2px;}
+.contents .price_box .box_list .sec_price span {font-size: 22px;}
+.contents .price_box .box_list .price .line::after {display: block; content: ''; position: absolute; left: 100%; top: 50%; transform: translate(0,-50%); height: 31px; width: 1px; background: #D8D8D8;}
+
+
+
+.contents .price_box .bike {margin-top: 64px;}
+
+/*---- Footer ----*/
+footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
+    /* footer sub1 */
+    footer .footer_sub1 {display:flex; flex-wrap: wrap; font-weight: 500;}
+    footer .footer_sub1 li {position: relative; padding-left: 12px; font-size: 13px;}
+    footer .footer_sub1 li::after {content: ''; display: block; position: absolute; top:4px; left: 5px; width: 1px; height: 12px; background-color: #999;}
+    footer .footer_sub1 li:first-child {padding-left: 0;}
+    footer .footer_sub1 li:nth-child(3) {padding-left: 0;}
+    footer .footer_sub1 li:nth-child(5) {padding-left: 0;}
+    /* footer sub2 */
+    footer .footer_sub2 {margin-top: 25px; color:#999;}
+    /* email */
+    footer .email {margin-top: 25px; padding-left: 22px; background: url(../images/icon_footer_email.png) no-repeat left 5px; background-size: 15px 11px; color: #999;}
+    /* copyright */
+    footer .copyright {margin-top: 5px; color:#999;}
+
+/* --------- Tablet --------- */
+@media screen and (min-width:767px) {
+    /*---- Tablet header ----*/
+    /* nav */
+    .navbar-default .container {width: auto;}
+    .navbar-default .container .navbar-header {height: 96px;}
+        /* logo */
+        .navbar-default .navbar-brand {top: 27px; left:35px; width: 85px; height: 35px; margin: 0;}
+        /* gnb */
+        .navbar-default .container .navbar-collapse ul {margin: 33px 36px 0;}
+        .navbar-default .container .navbar-collapse ul li {margin: 0 0 0 38px; padding:0;}
+        .navbar-default .container .navbar-collapse ul li a {text-indent: 0; color: #000; font-size: 18px; font-weight: 500; line-height: 23.4px;}
+        .navbar-default .container .navbar-collapse ul li a:hover {color: #E5150B;}
+        .navbar-default .container .navbar-collapse ul li a.active {color: #E5150B;}
+        .navbar-default .container .navbar-collapse ul li a.about {width: auto; height: auto; background: none;}
+        .navbar-default .container .navbar-collapse ul li a.pricing {width: auto; height: auto; background: none;}
+        .navbar-default .container .navbar-collapse ul li a.support {width: auto; height: auto; background: none;}
+
+    /*---- Main----*/
+    /* main */
+    .main {height: 460px; background: url(../images/img_priceing_web.png) no-repeat; background-size: cover; background-position: center center;}
+
+    /* contents */
+    .contents {margin:100px auto 160px; position: relative; padding-bottom: 0;}
+    .contents .text_area {width: 680px; margin: 0 auto;}
+    .contents .main_txt {font-size: 72px; line-height: 90px; padding-top: 61px; background-size: 52px 52px; background-position: left top;text-align: left;}
+    .contents .second_txt {font-size: 18px; line-height: 28px; margin:0; }
+    .contents .third_txt {position: unset; width: auto; bottom: auto; }
+
+    .contents .price_box {margin: 80px auto 0; padding: 0 46px;}
+    .contents .price_box .box_list {padding: 70px 64px 76px; border-radius: 50px;}
+    .contents .price_box .box_list .img_box {width: 300px; height: 300px;}
+    .contents .price_box .box_list p {margin: 0;}
+    .contents .price_box .box_list > p {margin-top: 80px; font-size: 30px;}
+
+    .contents .price_box .box_list .price {font-size: 18px;}
+    .contents .price_box .box_list .sec_price {margin-top: 10px; font-size: 30px;}
+    .contents .price_box .box_list .sec_price span {font-size: 40px;}
+    .contents .price_box .box_list .price .line::after {height: 56px;}
+    
+
+        /* footer */
+        footer .footer_sub1 li:nth-child(3), footer .footer_sub1 li:nth-child(5) {padding-left: 13px;}
+    }
+
+/* ---------- pc ---------- */
+@media screen and (min-width: 1441px) {
+    /*---- PC header ----*/
+    /* logo */
+    .navbar-default .navbar-brand {left: 45px;}
+    /* gnb */
+    .navbar-default .container .navbar-collapse ul {margin-right: 45px;}
+
+    /*---- Main----*/
+    /* main */
+    .main {height: 520px;}
+
+    /* contents */
+    .contents {margin:111px auto 200px;}
+    .contents .text_area {width: 1148px;}
+    .contents .main_txt {font-size: 76px; line-height: 96px; padding-top: 88px; background-size: auto; }
+    .contents .second_txt {font-size: 20px; line-height: 32px; }
+    .contents .third_txt {margin-top: 11px;}
+
+    .contents .price_box {padding: 0;}
+    .contents .price_box .box_list {padding: 70px 64px 76px; border-radius: 50px;}
+    .contents .price_box .box_list .img_box {width: 300px; height: 300px;}
+    .contents .price_box .box_list p {margin: 0;}
+    .contents .price_box .box_list > p {margin-top: 80px; font-size: 30px;}
+
+    
+.contents .price_box .bike {margin-top: 0px;}
+    
+
+    .contents .price_box .box_list .price {font-size: 18px;}
+    .contents .price_box .box_list .sec_price {margin-top: 10px; font-size: 30px;}
+    .contents .price_box .box_list .sec_price span {font-size: 40px;}
+    .contents .price_box .box_list .price .line::after {height: 56px;}
+
+        /* footer */
+        footer {padding: 36px 0;}
+        footer .footer_box {width: 1212px; margin: 0 auto; display: flex; flex-direction: column; align-items: flex-end;}
+        /* customer service */
+        footer .footer_sub1 li {padding-left: 24px; cursor: pointer;}
+        footer .footer_sub1 li:nth-child(3), footer .footer_sub1 li:nth-child(5) {padding-left: 24px;}
+        footer .footer_sub1 li::after {left: 11px; top: 4px;}
+        /* company */
+        footer .footer_sub2 {width: 400px; display: flex; flex-wrap: wrap;}
+        footer .footer_sub2 li {padding: 2px;}
+        footer .footer_sub2 li:first-child {margin-right: 85px;}
+        footer .footer_sub2 li:nth-child(3) {margin-right: 35px;}
+        /* contact */
+        footer .contact {display: flex; width: 400px; margin-top: 25px;}
+        footer .email {margin-right: 14px;}
+        footer .email, footer .copyright {margin-top: 0;}
+}
