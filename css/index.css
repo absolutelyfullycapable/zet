@@ -29,8 +29,7 @@ button::after, .btn_group a::after {content: ''; display: block; position: absol
 .navbar-default .container .navbar-collapse ul li a.pricing {width: 81px; background: url(../images/img_menu_pricing.png) no-repeat left top/contain;}
 .navbar-default .container .navbar-collapse ul li a.support {width: 103px; background: url(../images/img_menu_support.png) no-repeat left top/contain;}
 
-/* javascript part - 모바일 화면에서 내비게이션 버튼 클릭 시 어두운 배경 */
-.nav_bg {position: fixed; top:0; left:0; z-index:2; width:100%; height:100%; background-color:#000; opacity:0.6; display: none;}/* display:none으로 숨겨둘게용 가현언니~ */
+.nav_bg {position: fixed; top:0; left:0; z-index:2; width:100%; height:100%; background-color:#000; opacity:0.6; display: none;}
 
 /* logo */
 .navbar-default .navbar-brand {width: 48px; height: 24px; margin-left: 24px; padding: 0; position: absolute; top:24px;}
@@ -42,7 +41,6 @@ button::after, .btn_group a::after {content: ''; display: block; position: absol
 .navbar-default .navbar-toggle .btn-menu {margin-top: 5px; fill: #000;}
 .navbar-default button::after {display: none;}
 
-/* javascript part - 모바일 화면에서 내비게이션 버튼 X버튼 등장, display:none으로 일단 숨겨뒀어욥~ */
 .navbar-default .navbar-toggle .btn-menu-close {display: none;}
 
 /*---- Main----*/
@@ -74,14 +72,13 @@ button::after, .btn_group a::after {content: ''; display: block; position: absol
     #main #title .txt .btn_group .app_store span {background: url(../images/app.png) no-repeat left 3px;}
 
 /* section 2. how to */
-#main #how_to {width: 100%; padding-top:46px; margin-bottom: 60px; text-align: center; position: relative;}
+#main #how_to {width: 100%; padding-top:46px; margin-bottom: 60px; text-align: center; position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; flex-direction: column;}
     /* how to txt */
     #main #how_to .how_to_txt h3 {color: #000; font-size: 38px; font-weight: 700; line-height: 48px; background: url(../images/how_to.png) no-repeat center top; background-size: 22px 27px; padding-top:34px;}
     #main #how_to .how_to_txt h3 span {color:#E5150B;}
     #main #how_to .how_to_txt h3 .br_none {display: none;}
     #main #how_to .how_to_txt p {color: #000; font-size: 14px; line-height: 22px; margin-top: 10px;}
     /* how to slide */
-    /* javascript part - 가현언니.....스와이퍼 화이팅..! 임의로 설정해둬서 수정 필수ㅠ */
     #main #how_to .how_to_slide {position: relative; margin-top: 30px;}
     #main #how_to .how_to_slide .how_to_slide_contents {position: relative; top:auto; right: auto; left: 50%; -webkit-transform: translateX(-40%); -ms-transform: translateX(-40%); transform: translateX(-40%); width: 224px; height: 386px; background: url(../images/phone.png) no-repeat left top/contain; overflow: hidden;}
     #main #how_to .how_to_slide .how_to_slide_contents .swiper-container {margin:0 auto; position: relative; top:16px; left:-22px; width:159px; height:341px; border-radius: 24px; overflow: hidden; z-index:1;}
@@ -109,8 +106,13 @@ button::after, .btn_group a::after {content: ''; display: block; position: absol
     /* javascript part - btn active */
     #main #how_to .indicator li.active a {color:#E5150B; text-decoration: none;}
     #main #how_to .indicator li.active a svg g path {stroke:#E5150B;}
-    /* Indicator - description */
-    #main #how_to p {margin: 34px auto 0; font-size: 13px; line-height: 22px;}
+    /* Indicator - description gh:ul li형식으로 바꿈*/
+    #main #how_to .description {margin: 34px auto 0;width: 295px; font-size: 13px; line-height: 22px; height: 50px;}
+    #main #how_to .description li {display: none;}
+    #main #how_to .description li.active {display: block;}
+
+
+
 
 /* section 3. caution */
 #main #caution {width: 100%; padding-top: 60px; margin:0 auto 65px; text-align: center;}
@@ -121,7 +123,8 @@ button::after, .btn_group a::after {content: ''; display: block; position: absol
     #main #caution .caution_txt h2 br {display: none;}
     #main #caution .caution_txt p {font-size: 14px; line-height: 22px; margin-top:10px;}
     /* caution btn + icon */
-    #main #caution .caution_icon {margin-top: 34px;}
+    #main #caution .caution_icon {margin-top: 34px; position: relative; padding: 0;}
+    #main #caution .caution_icon .icon_group {display: -webkit-box; display:  -ms-flexbox; display: flex; overflow: hidden;}
         /* btn */
         #main #caution .caution_icon .btn_group_m a {width:134px; height: 36px; line-height: 36px; font-size: 14px; font-weight: 500; color:#757575; padding: 0; margin-right: 7px;}
         #main #caution .caution_icon .btn_group_m a:active, #main #caution .caution_icon .btn_group_m a:hover, #main #caution .caution_icon .btn_group_m a:focus, #main #caution .caution_icon .btn_group_m a.active {color:#fff;}
@@ -130,17 +133,14 @@ button::after, .btn_group a::after {content: ''; display: block; position: absol
         /* swiper */
         #main #caution .caution_icon .btn_group_pc {display: none;}
         #main #caution .caution_icon .pc_notification {display: none;}
-        /* javascript part - swiper...화이팅 */
         #main #caution .caution_icon ul {padding-top: 36px; display: flex;}
-        #main #caution .caution_icon ul li {position: relative;}
+        #main #caution .caution_icon ul li {position: relative; width: 100vw;}
         #main #caution .caution_icon ul li img {width: 257px;}
         #main #caution .caution_icon ul li p {margin-top: 26px; font-size: 16px; font-weight: 500;}
-        #main #caution .caution_icon .riding {position: absolute; top: 0; left:0;}
+        #main #caution .caution_icon .riding {display: none;}
         #main #caution .caution_icon .pagination_m_bf {margin-top:22px;}
         #main #caution .caution_icon .pagination_m_bf div {width:10px; height:10px; display: inline-block; border-radius: 100%; background-color: rgba(0, 0, 0, 0.2); margin:0 5px;}
-        /* javascript part : swiper pagination active */
         #main #caution .caution_icon .pagination_m_bf div.active {background-color: #E5150B;}
-        #main #caution .caution_icon .pagination_pc {display: none;}
 
 /* section 4. location */
 #main #location {position: relative; width: 100%; padding-top: 65px; margin: 0 auto 60px; text-align: center;}
@@ -160,13 +160,11 @@ button::after, .btn_group a::after {content: ''; display: block; position: absol
     #main #location .btn_group .btn-lg {width: 91px; height: 60px; font-size: 16px;}
     #main #location .btn_group .btn-lg::after {border: 2px solid #757575; border-radius: 12px;}
 
-    /* javascript part - 버튼 active 효과 */
-    /* active시 버튼 + 지도 표시 변경 */
     #main #location .map .jeju.active {background: url(../images/jeju.png) no-repeat 4px bottom; background-size: 50px 24px;}
     #main #location .map .jeju.active a div {width: 78px; padding:5px 0 17px; position: absolute; z-index: 2; top: -52px; left: 5px; background: url(../images/location_pin.png) no-repeat left top/contain; text-align: center; color:#fff; font-size: 18px; font-weight: 700; display: block;} /*gh-display*/
     #main #location .map .daejeon.active {background: url(../images/daejeon.png) no-repeat right bottom; background-size: 100%;}
     #main #location .map .daejeon.active a div {width: 78px; padding: 3px 0 12px; position: absolute; z-index: 2; top: -51px; left: -22px; background: url(../images/location_pin.png) no-repeat left top/contain; text-align:center; color:#fff; font-size: 14px; font-weight: 700; line-height: 16px; display: block;} /*gh-display*/ 
-    #main #location .btn_group .btn-lg.active, #main #location .btn_group .btn-lg:focus, #main #location .btn_group .btn-lg:hover, #main #location .btn_group .btn-lg:active {color: #fff; font-weight: 500; outline: none;} /*gh-outline*/
+    #main #location .btn_group .btn-lg.active, #main #location .btn_group .btn-lg:focus, #main #location .btn_group .btn-lg:hover, #main #location .btn_group .btn-lg:active {color: #fff; font-weight: 500; outline: none;}
     #main #location .btn_group .btn-lg.active::after, #main #location .btn_group .btn-lg:focus::after, #main #location .btn_group .btn-lg:hover::after, #main #location .btn_group .btn-lg:active::after {border-color: #E5150B; background-color: #E5150B; z-index: -1;}
     #main #location .btn_group .btn_jeju {margin-right: 14px;}
 
@@ -194,8 +192,6 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
     footer .footer_sub1 li:nth-child(5) {padding-left: 0;}
     /* footer sub2 */
     footer .footer_sub2 {margin-top: 25px; color:#999;}
-    /* license */
-    footer .license {margin-top: 25px; font-size: 12px; line-height: 20px; color:#999;}
     /* email */
     footer .email {margin-top: 25px; padding-left: 22px; background: url(../images/icon_footer_email.png) no-repeat left 5px; background-size: 15px 11px; color: #999;}
     /* copyright */
@@ -274,7 +270,8 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
         #main #how_to .indicator li.active a {color: #fff;}
         #main #how_to .indicator li.active a svg g path {stroke: #fff;}
         #main #how_to .indicator li.active a:after {border-color: #E5150B; background-color: #E5150B;}
-        #main #how_to p {margin-top: 52px; font-size: 20px;}
+        #main #how_to .description {margin-top: 52px; width: auto; font-size: 20px;}
+        
 
         /* section 3. caution */
         #main #caution {padding-top:110px;}
@@ -287,11 +284,11 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
             #main #caution .caution_txt p {width: 270px; font-size: 18px; line-height: 28px; margin-top: 16px;}
             /* caution icon */
             #main #caution .caution_icon {position: relative; margin-top:0; padding-top: 105px;}
-            /* javascript part - 임의로 둔 이미지 width 값 삭제 */
             #main #caution .caution_icon ul li img {width:210px;}
             #main #caution .caution_icon .btn_group_m {display: none;}
             #main #caution .caution_icon .pc_notification {position:absolute; top: -35px; right: 40px; display: inline-block; padding: 16px 24px 30px 24px; background: url(../images/pc_notification.png) no-repeat 76% 56px; background-size: 25px auto; font-size:18px; font-weight:700; color:#fff;}
             #main #caution .caution_icon .pc_notification::after {content: ''; display: block; position: absolute; top:0; left:0; z-index: -1; width: 100%; height: 56px; background-color: #000; border-radius: 12px; -webkit-transform: skew(-10deg,0deg); -ms-transform: skew(-10deg,0deg); transform: skew(-10deg,0deg);}
+            #main #caution .caution_icon .pagination_m_bf div:last-of-type {display: none;}
 
         /* section 4. location */
         #main #location {padding: 140px 0 0; text-align:left;}
@@ -367,7 +364,7 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
         #main #how_to .indicator li a svg {width: 36px; height:35px; margin-top:17px;}
         #main #how_to .indicator li a .icon-howto04 {width: 44px; height: 36px;}
         #main #how_to .indicator li a .icon-howto06 {width: 43px; height: 37px; margin-top: 17px;}
-        #main #how_to .description {position: relative; width: 1194px; padding-left: 22px; text-align: left;}
+        #main #how_to .description {position: relative; width: 1194px; padding-left: 22px; text-align: left;height:auto;}
         #main #how_to .description::after {content: ''; display: block; position: absolute; left: 0; top: 50%; width: 10px; height: 10px; margin-top: -5px; border-radius: 50%; background-color: #E2231A;}
 
         /* section 3. caution */
@@ -380,9 +377,7 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
             /* caution icon */
             #main #caution .caution_icon {padding: 0; width: 1386px;}
             #main #caution .caution_icon ul, #main #caution .caution_icon .riding {width: 1248px; padding-top: 110px; margin: 0 auto;}
-            #main #caution .caution_icon .riding {left: 69px;}
-
-            /* javascript part - 임의로 둔 이미지 width 값 삭제 */
+            
             #main #caution .caution_icon ul li img {width:306px;}
 
             #main #caution .caution_icon ul li p {font-size: 20px;}
@@ -434,8 +429,6 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
         footer .footer_sub2 li {padding: 2px;}
         footer .footer_sub2 li:first-child {margin-right: 85px;}
         footer .footer_sub2 li:nth-child(3) {margin-right: 35px;}
-        /* license */
-        footer .license {width:400px; margin-top: 25px;}
         /* contact */
         footer .contact {display: flex; width: 400px; margin-top: 25px;}
         footer .email {margin-right: 14px;}
