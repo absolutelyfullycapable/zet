@@ -8,10 +8,12 @@
 - 비상업적 용도로 만들어진 포트폴리오용 사이트입니다.
 
 ### available pages
-- [웹사이트 첫 페이지](https://absolutelyfullycapable.github.io/zet)
+- [About ZET](https://absolutelyfullycapable.github.io/zet)
+- [Pricing](https://absolutelyfullycapable.github.io/zet/pricing.html)
+- [Support](https://absolutelyfullycapable.github.io/zet/support.html)
 
 ### production period
-- 2020.11.20 -
+- 2020.11.20 - 2020.12.20
 
 ### degree of participation
 - 메인 페이지 HTML 작성 100%
