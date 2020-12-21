@@ -19,31 +19,42 @@ button::after, .btn_group a::after {content: ''; display: block; position: absol
 
 /*---- Mobile header ----*/
 /* nav */
-.navbar-default {background-color: #fff;}
+.navbar {border-bottom: none;}
+.navbar-default {background-color: transparent;}
 .navbar-default .container .navbar-header {height: 72px; position: relative;}
 .navbar-default .container .navbar-collapse, .navbar-default .navbar-form {border: none; padding: 0;}
 .navbar-default .container .navbar-collapse ul {margin:15px 0 30px;}
-.navbar-default .container .navbar-collapse ul li {padding-left: 26px; margin-top:15px}
-.navbar-default .container .navbar-collapse ul li a {display:block; height: 19px; padding: 0; text-indent: -9999px;}
+.navbar-default .container .navbar-collapse ul li {padding-left: 26px; margin-top:15px;}
+.navbar-default .container .navbar-collapse ul li a {display:block; height: 19px; padding: 0; text-indent: -9999px; color:#fff;}
 .navbar-default .container .navbar-collapse ul li a.about {width: 103px; background: url(../images/img_menu_about.png) no-repeat left top/contain;}
 .navbar-default .container .navbar-collapse ul li a.pricing {width: 81px; background: url(../images/img_menu_pricing.png) no-repeat left top/contain;}
 .navbar-default .container .navbar-collapse ul li a.support {width: 103px; background: url(../images/img_menu_support.png) no-repeat left top/contain;}
 
-/* javascript part - 모바일 화면에서 내비게이션 버튼 클릭 시 어두운 배경 */
-.nav_bg {position: fixed; top:0; left:0; z-index:2; width:100%; height:100%; background-color:#000; opacity:0.6; display: none;}/* display:none으로 숨겨둘게용 가현언니~ */
+.nav_bg {position: fixed; top:0; left:0; z-index:2; width:100%; height:100%; background-color:#000; opacity:0.6; display: none;}
 
 /* logo */
 .navbar-default .navbar-brand {width: 48px; height: 24px; margin-left: 24px; padding: 0; position: absolute; top:24px;}
 .navbar-default .navbar-brand svg {width: 100%; height: 100%;}
+.navbar-default .navbar-brand svg .fill {fill: #fff;}
+
 
 /* mobile nav btn */
 .navbar-default .navbar-toggle {width: 20px; height: 20px; border: none; margin: 0; padding: 0; position: absolute; top:24px; right:24px;}
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {background-color: transparent;}
 .navbar-default .navbar-toggle .btn-menu {margin-top: 5px; fill: #000;}
 .navbar-default button::after {display: none;}
-
-/* javascript part - 모바일 화면에서 내비게이션 버튼 X버튼 등장, display:none으로 일단 숨겨뒀어욥~ */
 .navbar-default .navbar-toggle .btn-menu-close {display: none;}
+
+    /* nav - scroll시 nav 배경색 변경 */
+    .navbar::after {content: ''; display: block; clear: both; position: absolute; top: -96px; left: 0; z-index: -1; width: 100%; height: 100%; background-color: #fff; -webkit-transition: top 0.3s ease-in-out; transition: top 0.3s ease-in-out;}
+    .navbar.scroll::after {top:0; border-bottom: 1px solid #E5E5E5; -webkit-transition: top 0.3s ease-in-out; transition: top 0.3s ease-in-out;}
+    .navbar-default.scroll .container .navbar-collapse ul li a {color:#000;}
+    /* nav - scroll시 logo, menu_btn 색 변경 */
+    .navbar-default.scroll .navbar-brand svg .fill {fill: #E2231A;}
+    .navbar-default.scroll .navbar-toggle svg .fill {fill: #000;}
+
+/* 모바일 nav 스크롤시 배경 */
+.nav_bg {position: fixed; top:0; left:0; z-index:1; width:100%; height:100%; background-color:#000; opacity:0.6; display: none;}
 
 /*---- Main----*/
 /* main */
@@ -53,6 +64,7 @@ button::after, .btn_group a::after {content: ''; display: block; position: absol
 .contents {margin:50px auto 0; position: relative; padding-bottom: 122px;}
 .contents .text_area {width: 290px; margin: 0 auto;}
 .contents .main_txt {font-size: 38px; line-height: 48px; font-weight: 900; padding-top: 34px;background: url(../images/icon_coin.png) no-repeat 0 0; background-size: 28px 28px; background-position: center top;}
+.contents .main_txt .pc_br {display:none;}
 .contents .main_txt span {color: #E2231A;}
 .contents .second_txt {font-size: 14px; line-height: 22px; margin-top: 10px; }
 .contents .third_txt {font-size: 16px; line-height: 22px; margin: 25px auto 0; position: absolute; width: 250px; bottom: 60px; color: #757575; font-weight: 500;}
@@ -86,6 +98,8 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
     footer .footer_sub2 {margin-top: 25px; color:#999;}
     /* email */
     footer .email {margin-top: 25px; padding-left: 22px; background: url(../images/icon_footer_email.png) no-repeat left 5px; background-size: 15px 11px; color: #999;}
+    /* license */
+    footer .license {margin-top: 25px; font-size: 12px; line-height: 20px; color:#999;}
     /* copyright */
     footer .copyright {margin-top: 5px; color:#999;}
 
@@ -97,10 +111,11 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
     .navbar-default .container .navbar-header {height: 96px;}
         /* logo */
         .navbar-default .navbar-brand {top: 27px; left:35px; width: 85px; height: 35px; margin: 0;}
+        .navbar-default .navbar-brand svg .fill {fill: #E2231A;}
         /* gnb */
         .navbar-default .container .navbar-collapse ul {margin: 33px 36px 0;}
         .navbar-default .container .navbar-collapse ul li {margin: 0 0 0 38px; padding:0;}
-        .navbar-default .container .navbar-collapse ul li a {text-indent: 0; color: #000; font-size: 18px; font-weight: 500; line-height: 23.4px;}
+        .navbar-default .container .navbar-collapse ul li a {text-indent: 0; color: #fff; font-size: 18px; font-weight: 500; line-height: 23.4px;}
         .navbar-default .container .navbar-collapse ul li a:hover {color: #E5150B;}
         .navbar-default .container .navbar-collapse ul li a.active {color: #E5150B;}
         .navbar-default .container .navbar-collapse ul li a.about {width: auto; height: auto; background: none;}
@@ -114,9 +129,9 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
     /* contents */
     .contents {margin:100px auto 160px; position: relative; padding-bottom: 0;}
     .contents .text_area {width: 680px; margin: 0 auto;}
-    .contents .main_txt {font-size: 72px; line-height: 90px; padding-top: 61px; background-size: 52px 52px; background-position: left top;text-align: left;}
-    .contents .second_txt {font-size: 18px; line-height: 28px; margin:0; }
-    .contents .third_txt {position: unset; width: auto; bottom: auto; }
+    .contents .main_txt {font-size: 72px; line-height: 90px; padding-top: 61px; background-size: 52px 52px; background-position: left top; text-align: left;}
+    .contents .second_txt {font-size: 18px; line-height: 28px; margin-top :16px; text-align: left;}
+    .contents .third_txt {position: unset; width: auto; bottom: auto; text-align: left;}
 
     .contents .price_box {margin: 80px auto 0; padding: 0 46px;}
     .contents .price_box .box_list {padding: 70px 64px 76px; border-radius: 50px;}
@@ -135,7 +150,7 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
     }
 
 /* ---------- pc ---------- */
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1024px) {
     /*---- PC header ----*/
     /* logo */
     .navbar-default .navbar-brand {left: 45px;}
@@ -150,6 +165,8 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
     .contents {margin:111px auto 200px;}
     .contents .text_area {width: 1148px;}
     .contents .main_txt {font-size: 76px; line-height: 96px; padding-top: 88px; background-size: auto; }
+    .contents .main_txt .pc_br_hide {display:none;}
+    .contents .main_txt .pc_br {display:block;}
     .contents .second_txt {font-size: 20px; line-height: 32px; }
     .contents .third_txt {margin-top: 11px;}
 
@@ -180,6 +197,8 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
         footer .footer_sub2 li {padding: 2px;}
         footer .footer_sub2 li:first-child {margin-right: 85px;}
         footer .footer_sub2 li:nth-child(3) {margin-right: 35px;}
+        /* license */
+        footer .license {width:400px; margin-top: 25px;}
         /* contact */
         footer .contact {display: flex; width: 400px; margin-top: 25px;}
         footer .email {margin-right: 14px;}

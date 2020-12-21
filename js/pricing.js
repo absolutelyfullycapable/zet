@@ -4,33 +4,28 @@
                         e.preventDefault();
                        });
 
-        //nav 버튼 변경, 배경색
+    //nav 버튼 변경, 배경색
     $('.btn-menu').click(function(){
         $('.btn-menu').css('display','none');
         $('.btn-menu-close').css('display','block');
         $('.nav_bg').css('display','block');
+        $('.navbar').addClass('scroll');
     });
     $('.btn-menu-close').click(function(){
         $('.btn-menu-close').css('display','none');
         $('.btn-menu').css('display','block');
         $('.nav_bg').css('display','none');
+        $('.navbar').removeClass('scroll');
     });
 
-    // 모바일 헤더 스크롤시 색상 변화
-    // $(window).scroll(function(){
-    //     let scroll = $(window).scrollTop();
-    //     if (scroll > 50) {
-    //         $('header').addClass('scroll');
-
-    //     } else {
-    //         $('.btn-menu').click(function(){
-    //             $('.logo svg g').addClass('Down');
-    //         });
-    //         $('.btn-menu-close').click(function(){
-    //             $('.logo svg g').removeClass('Down');
-    //         });
-    //         $('header').removeClass('scroll');
-    //     }
-    // });
+    //scroll 스크롤 이벤트 - nav 배경색 변경
+    $(window).scroll(function(){
+        var scroll = $(this).scrollTop();
+        if(scroll > 90) {
+            $('.navbar').addClass('scroll');
+        } else {
+            $('.navbar').removeClass('scroll');
+        }
+    });
 
 });
