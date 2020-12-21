@@ -72,7 +72,6 @@
 
 
     //location map
-
     var btn_daejeon = $('#main #location .btn_group .btn_daejeon');
     var btn_jeju = $('#main #location .btn_group .btn_jeju');
     var map_daejeon = $('#main #location .map .daejeon');
