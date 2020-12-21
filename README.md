@@ -16,9 +16,11 @@
 - 2020.11.20 - 2020.12.20
 
 ### degree of participation
-- 메인 페이지 HTML 작성 100%
-- 메인 페이지 내 사용된 이미지 및 비디오 서치 및 제작
+- index 페이지 HTML 작성 100%
+    - index 페이지 CSS, JS/jQuery 작성자와 소통하며 수정
+- index 페이지 내 사용된 이미지 및 비디오 서치 및 제작
 - favicon, open graph 및 twitter card image 제작
+- pricing, support 구축자와 소통하며 전체적인 
 
 <br>
 copyright (c) 2020 Ji Hye LEE
