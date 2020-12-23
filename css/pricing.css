@@ -15,7 +15,7 @@ button::after, .btn_group a::after {content: ''; display: block; position: absol
 /* initialize button effect */
 .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default {color: inherit; background-color: transparent; border-color: inherit;}
 
-/*==============    Mobile      ==============*/
+/*==============    Mobile    ==============*/
 
 /*---- Mobile header ----*/
 /* nav */
@@ -103,8 +103,8 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
     /* copyright */
     footer .copyright {margin-top: 5px; color:#999;}
 
-/* --------- Tablet --------- */
-@media screen and (min-width:767px) {
+/*==============    Tablet    ==============*/
+@media screen and (min-width:768px) {
     /*---- Tablet header ----*/
     /* nav */
     .navbar-default .container {width: auto;}
@@ -149,8 +149,8 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
         footer .footer_sub1 li:nth-child(3), footer .footer_sub1 li:nth-child(5) {padding-left: 13px;}
     }
 
-/* ---------- pc ---------- */
-@media screen and (min-width: 1024px) {
+/*==============    PC    ==============*/
+@media screen and (min-width: 1441px) {
     /*---- PC header ----*/
     /* logo */
     .navbar-default .navbar-brand {left: 45px;}

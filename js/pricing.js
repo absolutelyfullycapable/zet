@@ -9,13 +9,13 @@
         $('.btn-menu').css('display','none');
         $('.btn-menu-close').css('display','block');
         $('.nav_bg').css('display','block');
-        $('.navbar').addClass('scroll');
+        $('html').css('overflow', 'hidden');
     });
     $('.btn-menu-close').click(function(){
         $('.btn-menu-close').css('display','none');
         $('.btn-menu').css('display','block');
         $('.nav_bg').css('display','none');
-        $('.navbar').removeClass('scroll');
+        $('html').css('overflow', 'initial');
     });
 
     //scroll 스크롤 이벤트 - nav 배경색 변경
