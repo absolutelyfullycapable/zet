@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
     $('a[href="#"]').click(function(e){
         e.preventDefault();
     });
@@ -19,16 +18,29 @@ $(document).ready(function(){
     });
 
     //accodian menu
-    $('.faq-board a').on('click',function(){
-        var inx = $(this).parents('li').index();
+    $('.faq-box').hide();
 
-        $(this).parents('li').addClass('on').siblings().removeClass('on');
-        if($(this).parents('li').is(':visible')){
-            $(this).next().slideUp();
-            $('.support-faq-img').find('li').removeClass('on');
-        }
-        $('.faq-list p').slideUp();
-        $(this).next().slideDown();
+    $('.faq-list a').on('click', function() {
+        var inx = $(this).parents('li').index();
+        
+        $(this).parents('li').toggleClass('on');
+        $('.faq-box').stop().slideUp();
+        $(this).next('.faq-box').stop().slideDown();
         $('.support-faq-img').find('li').eq(inx).addClass('on').siblings().removeClass('on');
+
+        if($(this).parents('li').hasClass('on')) {
+            $(this).parents('li').siblings().removeClass('on');
+            $(this).on('click', function() {
+                $(this).next('.faq-box').stop().slideUp();
+                $(this).parents('li').removeClass('on');
+                $('.support-faq-img').find('li').eq(inx).removeClass('on');
+            });
+        } else {
+            $(this).on('click', function() {
+                $(this).next('.faq-box').stop().slideDown();
+                $(this).parents('li').addClass('on');
+                $('.support-faq-img').find('li').eq(inx).addClass('on');
+            });
+        }
     });
 });
