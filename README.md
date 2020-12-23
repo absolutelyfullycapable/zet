@@ -20,7 +20,7 @@
     - index 페이지 CSS, JS/jQuery 작성자와 소통하며 수정
 - index 페이지 내 사용된 이미지 및 비디오 서치 및 제작
 - favicon, open graph 및 twitter card image 제작
-- pricing, support 구축자와 소통하며 전체적인 
+- pricing, support 구축자와 소통하며 전체적인 수정
 
 <br>
 copyright (c) 2020 Ji Hye LEE
