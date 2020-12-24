@@ -21,26 +21,19 @@ $(document).ready(function(){
     $('.faq-box').hide();
 
     $('.faq-list a').on('click', function() {
-        var inx = $(this).parents('li').index();
-        
-        $(this).parents('li').toggleClass('on');
-        $('.faq-box').stop().slideUp();
-        $(this).next('.faq-box').stop().slideDown();
-        $('.support-faq-img').find('li').eq(inx).addClass('on').siblings().removeClass('on');
+        var inx = $(this).parents('li').index(),
+            style = $(this).parents('li').hasClass('on');
 
-        if($(this).parents('li').hasClass('on')) {
-            $(this).parents('li').siblings().removeClass('on');
-            $(this).on('click', function() {
-                $(this).next('.faq-box').stop().slideUp();
-                $(this).parents('li').removeClass('on');
-                $('.support-faq-img').find('li').eq(inx).removeClass('on');
-            });
-        } else {
-            $(this).on('click', function() {
-                $(this).next('.faq-box').stop().slideDown();
-                $(this).parents('li').addClass('on');
-                $('.support-faq-img').find('li').eq(inx).addClass('on');
-            });
+        if(style == false) {//닫힌 상태인 리스트 클릭
+            $('.faq-list a').parents('li').removeClass('on');
+            $(this).parents('li').addClass('on');
+            $('.faq-box').stop().slideUp();
+            $(this).siblings('.faq-box').stop().slideDown();
+            $('.support-faq-img').find('li').eq(inx).addClass('on').siblings().removeClass('on');
+        } else {//열린 상태인 리스트 클릭
+            $(this).parents('li').removeClass('on');
+            $('.faq-box').stop().slideUp();
+            $('.support-faq-img').find('li').eq(inx).removeClass('on');
         }
     });
 });
