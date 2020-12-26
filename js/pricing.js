@@ -1,8 +1,8 @@
   $(document).ready(function(){
 
     $('a[href="#"]').click(function(e){
-                        e.preventDefault();
-                       });
+        e.preventDefault();
+    });
 
     //nav 버튼 변경, 배경색
     $('.btn-menu').click(function(){
@@ -10,12 +10,14 @@
         $('.btn-menu-close').css('display','block');
         $('.nav_bg').css('display','block');
         $('html').css('overflow', 'hidden');
+        $('.navbar-default .navbar-brand svg .fill').addClass('click');
     });
     $('.btn-menu-close').click(function(){
         $('.btn-menu-close').css('display','none');
         $('.btn-menu').css('display','block');
         $('.nav_bg').css('display','none');
         $('html').css('overflow', 'initial');
+        $('.navbar-default .navbar-brand svg .fill').removeClass('click');
     });
 
     //scroll 스크롤 이벤트 - nav 배경색 변경
