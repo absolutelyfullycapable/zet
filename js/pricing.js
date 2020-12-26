@@ -10,6 +10,7 @@
         $('.btn-menu-close').css('display','block');
         $('.nav_bg').css('display','block');
         $('html').css('overflow', 'hidden');
+        $('.navbar').addClass('click');
         $('.navbar-default .navbar-brand svg .fill').addClass('click');
     });
     $('.btn-menu-close').click(function(){
@@ -17,6 +18,7 @@
         $('.btn-menu').css('display','block');
         $('.nav_bg').css('display','none');
         $('html').css('overflow', 'initial');
+        $('.navbar').removeClass('click');
         $('.navbar-default .navbar-brand svg .fill').removeClass('click');
     });
 

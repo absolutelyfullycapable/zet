@@ -48,13 +48,13 @@ button::after, .btn_group a::after {content: ''; display: block; position: absol
 
     /* nav - scroll시 nav 배경색 변경 */
     .navbar::after {content: ''; display: block; clear: both; position: absolute; top: -96px; left: 0; z-index: -1; width: 100%; height: 100%; background-color: #fff; -webkit-transition: top 0.3s ease-in-out; transition: top 0.3s ease-in-out;}
-    .navbar.scroll::after {top:0; border-bottom: 1px solid #E5E5E5; -webkit-transition: top 0.3s ease-in-out; transition: top 0.3s ease-in-out;}
+    .navbar.click::after, .navbar.scroll::after {top:0; border-bottom: 1px solid #E5E5E5; -webkit-transition: top 0.3s ease-in-out; transition: top 0.3s ease-in-out;}
     .navbar-default.scroll .container .navbar-collapse ul li a {color:#000;}
     /* nav - scroll시 logo, menu_btn 색 변경 */
     .navbar-default.scroll .navbar-brand svg .fill {fill: #E2231A;}
     .navbar-default.scroll .navbar-toggle svg .fill {fill: #000;}
 
-/* 모바일 nav 스크롤시 배경 */
+/* 모바일 nav 클릭 시 배경 */
 .nav_bg {position: fixed; top:0; left:0; z-index:1; width:100%; height:100%; background-color:#000; opacity:0.6; display: none;}
 
 /*---- Main----*/
