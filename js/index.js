@@ -62,14 +62,37 @@
     $('#main #caution .caution_icon .btn_group_m a.caution_btn1').click(function(){
         $('#main #caution .caution_icon .btn_group_m a').removeClass('active');
         $(this).addClass('active');
-        $('#main #caution .caution_icon ul').css('display','none')
-        $('#main #caution .caution_icon .before').css('display','flex')
+        $('#main #caution .caution_icon ul').css('display','none');
+        $('#main #caution .caution_icon .before').css('display','flex');
+        $('#main #caution .swiper-container').css('display', 'block');
+        $('#main #caution .swiper-container .swiper-pagination').css('display', 'block');
+        $('#main #caution .second-container .swiper-pagination').css('display', 'none');
+        $('#main #location .location_box').css('padding-top', 0);
     });
     $('#main #caution .caution_icon .btn_group_m a.caution_btn2').click(function(){
         $('#main #caution .caution_icon .btn_group_m a').removeClass('active');
         $(this).addClass('active');
         $('#main #caution .caution_icon ul').css('display','none');
         $('#main #caution .caution_icon .riding').css('display','flex');
+        $('#main #caution .swiper-container').css('display', 'none');
+        $('#main #caution .swiper-container .swiper-pagination').css('display', 'none');
+        $('#main #caution .second-container .swiper-pagination').css('display', 'block');
+        $('#main #location .location_box').css('padding-top', 42);
+    });
+
+    // Swiper
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        }
+    });
+
+    var secondswiper = new Swiper('.second-container', {
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        }
     });
 
 

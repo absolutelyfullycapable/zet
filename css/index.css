@@ -122,13 +122,16 @@ button::after, .btn_group a::after {content: ''; display: block; position: absol
     #main #caution .caution_txt p {font-size: 14px; line-height: 22px; margin-top:10px;}
     /* caution btn + icon */
     #main #caution .caution_icon {margin-top: 34px; position: relative; padding: 0;}
-    #main #caution .caution_icon .icon_group {display: -webkit-box; display:  -ms-flexbox; display: flex; overflow: hidden;}
         /* btn */
         #main #caution .caution_icon .btn_group_m a {width:134px; height: 36px; line-height: 36px; font-size: 14px; font-weight: 500; color:#757575; padding: 0; margin-right: 7px;}
         #main #caution .caution_icon .btn_group_m a:active, #main #caution .caution_icon .btn_group_m a:hover, #main #caution .caution_icon .btn_group_m a:focus, #main #caution .caution_icon .btn_group_m a.active {color:#fff;}
         #main #caution .caution_icon .btn_group_m a::after {border: 0.15em solid #D9D9D9; border-radius: 7px; z-index: -1;}
         #main #caution .caution_icon .btn_group_m a:active::after, #main #caution .caution_icon .btn_group_m a:hover::after, #main #caution .caution_icon .btn_group_m a:focus::after, #main #caution .caution_icon .btn_group_m a.active::after {border-color: #E5150B; background-color: #E5150B;}
+
         /* swiper */
+        #main #caution .caution_icon .swiper-container, #main #caution .caution_icon .second-container {padding-bottom: 42px;}
+        #main #caution .second-container .swiper-pagination, #main #caution .third-swiper { display: none; }
+
         #main #caution .caution_icon .btn_group_pc {display: none;}
         #main #caution .caution_icon .pc_notification {display: none;}
         
@@ -142,7 +145,7 @@ button::after, .btn_group a::after {content: ''; display: block; position: absol
         #main #caution .caution_icon .pagination_m_bf div.active {background-color: #E5150B;}
 
 /* section 4. location */
-#main #location {position: relative; width: 100%; padding-top: 65px; margin: 0 auto 60px; text-align: center;}
+#main #location {position: relative; width: 100%; margin: 0 auto 60px; text-align: center;}
     /* location title */
     #main #location img {width:23px; height: 28px;}
     #main #location h2 {color:#fff; font-size: 38px; font-weight: 700; line-height: 48px; padding-top: 11px;}

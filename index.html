@@ -31,12 +31,14 @@
         <!-- font-family:'Noto Sans KR', sans-serif; -->
         <!-- CSS 연결 -->
         <link rel="stylesheet" href="common/normalize.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="common/bootstrap.min.css">
+        <link rel="stylesheet" href="common/swiper-bundle.min.css">
         <link rel="stylesheet" href="css/index.css">
         <!-- JS/jQuery 연결 -->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="common/bootstrap.min.js"></script>
+        <script src="common/swiper-bundle.min.js"></script>
         <script src="js/index.js"></script>
     </head>
 
@@ -195,53 +197,89 @@
                         <p>ZET 이용 시, 안전을 위해 이것만은 꼭 지켜 주세요!</p>
                     </div> <!-- caution_txt -->
                     <div class="caution_icon col-sm-12">
+                        <!----------- mobile ----------->
                         <div class="btn_group btn_group_m">
                             <a href="#" class="btn btn-lg btn-default caution_btn1 active">탑승 전 확인하세요</a>
                             <a href="#" class="btn btn-lg btn-default caution_btn2">주행 중 유의하세요</a>
                         </div> <!-- btnr group mobile (모바일 환경에서 나타나는 버튼) -->
+
+                        <div class="swiper-container">
+                            <ul class="before swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <img src="images/before1.png" alt="before_1">
+                                    <p>탑승 정원은 ZET 1대당 1명씩</p>
+                                </li>
+                                <li class="swiper-slide">
+                                    <img src="images/before2.png" alt="before_2">
+                                    <p>인도에서는 타면 안 돼요!</p>
+                                </li>
+                                <li class="swiper-slide">
+                                    <img src="images/before3.png" alt="before_3">
+                                    <p>킥보드 사용은 운전면허가 필수!</p>
+                                </li>
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div> <!-- swiper-container -->
+                        <div class="second-container">
+                            <ul class="riding swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <img src="images/riding1.png" alt="riding_1">
+                                    <p>헬멧은 반드시 착용</p>
+                                </li>
+                                <li class="swiper-slide">
+                                    <img src="images/riding2.png" alt="riding_2">
+                                    <p>음주 상태에서 이용 금지</p>
+                                </li>
+                                <li class="swiper-slide">
+                                    <img src="images/riding3.png" alt="riding_3">
+                                    <p>주행 중 이어폰 사용 금지</p>
+                                </li>
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div> <!-- second-container -->
+
+
+                        <!----------- pc ----------->
+                        <div class="third-swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <div class="box">
+                                        <img src="images/before1.png" alt="before_1">
+                                        <p>탑승 정원은 ZET 1대당 1명씩</p>
+                                    </div>
+                                    <div class="box">
+                                        <img src="images/before2.png" alt="before_2">
+                                        <p>인도에서는 타면 안 돼요!</p>
+                                    </div>
+                                    <div class="box">
+                                        <img src="images/before3.png" alt="before_3">
+                                        <p>킥보드 사용은 운전면허가 필수!</p>
+                                    </div>
+                                </li>
+                                <li class="swiper-slide">
+                                    <div class="box">
+                                        <img src="images/riding1.png" alt="riding_1">
+                                        <p>헬멧은 반드시 착용</p>
+                                    </div>
+                                    <div class="box">
+                                        <img src="images/riding2.png" alt="riding_2">
+                                        <p>음주 상태에서 이용 금지</p>
+                                    </div>
+                                    <div class="box">
+                                        <img src="images/riding3.png" alt="riding_3">
+                                        <p>주행 중 이어폰 사용 금지</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
                         <div class="btn_group btn_group_pc">
                             <a href="#" class="btn btn-lg btn-default caution_btn1 prev"></a>
                             <a href="#" class="btn btn-lg btn-default caution_btn2 next"></a>
                         </div> <!-- btnr group pc (PC 환경에서 나타나는 버튼) -->
 
-                        <div class="icon_group"> <!--gh:ul 묶는 div생성-->
-                            <p class="pc_notification">탑승 전 확인하세요!</p>
-                            <ul class="before">
-                                <li>
-                                    <img src="images/before1.png" alt="before_1">
-                                    <p>탑승 정원은 ZET 1대당 1명씩</p>
-                                </li>
-                                <li>
-                                    <img src="images/before2.png" alt="before_2">
-                                    <p>인도에서는 타면 안 돼요!</p>
-                                </li>
-                                <li>
-                                    <img src="images/before3.png" alt="before_3">
-                                    <p>킥보드 사용은 운전면허가 필수!</p>
-                                </li>
-                            </ul>
-    
-                            <p class="pc_notification">주행 중 유의하세요!</p>
-                            <ul class="riding">
-                                <li>
-                                    <img src="images/riding1.png" alt="riding_1">
-                                    <p>헬멧은 반드시 착용</p>
-                                </li>
-                                <li>
-                                    <img src="images/riding2.png" alt="riding_2">
-                                    <p>음주 상태에서 이용 금지</p>
-                                </li>
-                                <li>
-                                    <img src="images/riding3.png" alt="riding_3">
-                                    <p>주행 중 이어폰 사용 금지</p>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="pagination_pc">
-                            <div></div>
-                            <div></div>
-                        </div> <!-- pagination (pc) -->
+                        <p class="pc_notification">탑승 전 확인하세요!</p>
+                        <p class="pc_notification">주행 중 유의하세요!</p>
                     </div> <!-- caution_icon -->
                 </div>
             </section> <!-- caution -->
