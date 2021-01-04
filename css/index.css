@@ -2,6 +2,7 @@
 
 /* basic font */
 body {font-family: 'Noto Sans KR','helvetica', 'AppleSDGothicNeoL00',sans-serif; color: #000;}
+html {overflow-x: hidden;}
 body, html {letter-spacing: -0.4px;}
 
 /* initialization */
@@ -130,7 +131,7 @@ button::after, .btn_group a::after {content: ''; display: block; position: absol
 
         /* swiper */
         #main #caution .caution_icon .swiper-container, #main #caution .caution_icon .second-container {padding-bottom: 42px;}
-        #main #caution .second-container .swiper-pagination, #main #caution .third-swiper { display: none; }
+        #main #caution .second-container .swiper-pagination, #main #caution .third-container {display: none;}
 
         #main #caution .caution_icon .btn_group_pc {display: none;}
         #main #caution .caution_icon .pc_notification {display: none;}
@@ -280,6 +281,12 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
         /* section 3. caution */
         #main #caution {padding-top:110px;}
         #main #caution .row {width: 704px; margin: 0 auto;}
+            /* swiper */
+            #main #caution .caution_icon .swiper-container, #main #caution .caution_icon .second-container {display: none;}
+            #main #caution .third-container {display: block; padding-bottom:80px;}
+            #main #caution .third-container ul li {display: flex; justify-content: space-between;}
+            .swiper-pagination-bullet {width: 10px; height: 10px;}
+
             /* caution txt */
             #main #caution .caution_txt {text-align:left;}
             #main #caution .caution_txt img {width: 71px; height: 63px;}
@@ -287,9 +294,10 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
             #main #caution .caution_txt h2 br {display: block;}
             #main #caution .caution_txt p {width: 270px; font-size: 18px; line-height: 28px; margin-top: 16px;}
             /* caution icon */
-            #main #caution .caution_icon {position: relative; margin-top:0; padding-top: 105px;}
+            #main #caution .caution_icon {position: relative; margin-top:0; padding-top: 25px;}
+            #main #caution .caution_icon ul li img {width: 210px;}
             #main #caution .caution_icon .btn_group_m {display: none;}
-            #main #caution .caution_icon .pc_notification {position:absolute; top: -35px; right: 40px; display: inline-block; padding: 16px 24px 30px 24px; background: url(../images/pc_notification.png) no-repeat 76% 56px; background-size: 25px auto; font-size:18px; font-weight:700; color:#fff;}
+            #main #caution .caution_icon .pc_notification {position:absolute; top: -35px; right: 0px; display: inline-block; padding: 16px 24px 30px 24px; background: url(../images/pc_notification.png) no-repeat 76% 56px; background-size: 25px auto; font-size:18px; font-weight:700; color:#fff;}
             #main #caution .caution_icon .pc_notification::after {content: ''; display: block; position: absolute; top:0; left:0; z-index: -1; width: 100%; height: 56px; background-color: #000; border-radius: 12px; -webkit-transform: skew(-10deg,0deg); -ms-transform: skew(-10deg,0deg); transform: skew(-10deg,0deg);}
             #main #caution .caution_icon .pagination_m_bf div:last-of-type {display: none;}
 

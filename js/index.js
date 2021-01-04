@@ -95,6 +95,12 @@
         }
     });
 
+    var thirdswiper = new Swiper('.third-container', {
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        }
+    });
 
     //location map
     var btn_daejeon = $('#main #location .btn_group .btn_daejeon');
