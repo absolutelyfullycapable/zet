@@ -22,7 +22,7 @@
     - index.html 작성 100%
     - index 페이지 내 사용된 이미지 및 비디오 서치 및 제작
     - index 페이지 CSS, JS/jQuery 작성자와 소통하며 수정
-    - nav 애니메이션 수정
+    - nav 애니메이션, Swiper 수정
 - pricing 페이지 (Pricing)
     - nav 애니메이션 수정
 - support 페이지 (Support)
