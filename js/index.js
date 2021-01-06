@@ -82,6 +82,7 @@
 
     // Swiper
     var swiper = new Swiper('.swiper-container', {
+        loop: true,
         pagination: {
           el: '.swiper-pagination',
           clickable: true
@@ -89,6 +90,7 @@
     });
 
     var secondswiper = new Swiper('.second-container', {
+        loop: true,
         pagination: {
           el: '.swiper-pagination',
           clickable: true
@@ -96,11 +98,22 @@
     });
 
     var thirdswiper = new Swiper('.third-container', {
+        autoplay: {delay:2500},
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
         pagination: {
             el: '.swiper-pagination',
             clickable: true
         }
     });
+
+    var width = $(window).width();
+    if(width >= 1440) {
+        thirdswiper.autoplay.stop();
+    }
 
     //location map
     var btn_daejeon = $('#main #location .btn_group .btn_daejeon');
