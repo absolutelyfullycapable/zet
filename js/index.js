@@ -98,6 +98,7 @@
     });
 
     var thirdswiper = new Swiper('.third-container', {
+        speed: 500,
         autoplay: {delay:2500},
         loop: true,
         navigation: {

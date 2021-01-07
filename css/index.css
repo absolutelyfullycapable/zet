@@ -142,7 +142,6 @@ button::after, .btn_group a::after {content: ''; display: block; position: absol
         #main #caution .caution_icon .pagination_m_bf {margin-top:22px;}
         #main #caution .caution_icon .pagination_m_bf div {width:10px; height:10px; display: inline-block; border-radius: 100%; background-color: rgba(0, 0, 0, 0.2); margin:0 5px;}
         #main #caution .caution_icon .pagination_m_bf div.active {background-color: #E5150B;}
-        .swiper-pagination-bullet {background-color: #E5150B;}
 
 /* section 4. location */
 #main #location {position: relative; width: 100%; margin: 0 auto 60px; text-align: center;}
@@ -402,8 +401,8 @@ footer {background-color: #f5f5f5; padding: 24px 26px; font-size: 12px;}
                 #main #caution .caution_icon .swiper-button-prev, #main #caution .caution_icon .swiper-button-next {display: block;}
                 .swiper-button-next, .swiper-button-prev {width: 54px;}
                 .swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after,.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {content: none;}
-                .swiper-button-next {background: url(../images/btn_next.png) no-repeat; background-size: contain;}
-                .swiper-button-prev {background: url(../images/btn_prev.png) no-repeat; background-size: contain;}
+                .swiper-button-next {background: url(../images/btn_next.png) no-repeat; background-size: contain; outline: none;}
+                .swiper-button-prev {background: url(../images/btn_prev.png) no-repeat; background-size: contain; outline: none;}
 
         /* section 4. location */
         #main #location {padding: 130px 0 0;}
