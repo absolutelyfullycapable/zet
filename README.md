@@ -20,15 +20,15 @@
 
 - index 페이지 (About ZET)
     - index.html 작성 100%
-    - index 페이지 내 사용된 이미지 및 비디오 서치 및 제작
     - index 페이지 CSS, JS/jQuery 작성자와 소통하며 수정
-    - nav 애니메이션, Swiper 수정
+    - nav 애니메이션 수정
+    - ZET 이용 수칙 Swiper 수정
 - pricing 페이지 (Pricing)
     - nav 애니메이션 수정
 - support 페이지 (Support)
     - support.html 오류 수정
-    - support.css 정리 및 오류 수정
-    - support.js 오류 수정
+    - support.css 정리 및 수정
+    - FAQ (아코디언 메뉴) 수정
     - nav 애니메이션 수정
 
 <br>
