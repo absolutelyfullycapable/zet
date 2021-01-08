@@ -16,20 +16,16 @@
 - 2020.11.20 - 2020.12.20
 
 ### degree of participation
-- favicon, open graph 및 twitter card image 제작 + 작성
-
-- index 페이지 (About ZET)
-    - index.html 작성 100%
-    - index 페이지 CSS, JS/jQuery 작성자와 소통하며 수정
-    - nav 애니메이션 수정
-    - ZET 이용 수칙 Swiper 수정
-- pricing 페이지 (Pricing)
-    - nav 애니메이션 수정
-- support 페이지 (Support)
-    - support.html 오류 수정
-    - support.css 정리 및 수정
-    - FAQ (아코디언 메뉴) 수정
-    - nav 애니메이션 수정
+- favicon 제작 및 open graph, twitter card 작성
+- 전 페이지 nav 애니메이션 수정
+- About ZET 페이지 (index)
+    - HTML5: 작성 100%
+    - CSS3: 해당 작업 작성자와 소통하며 보완
+    - JavaScript/jQuery: Swiper 플러그인 추가 및 수정 (ZET 이용 수칙)
+- Support 페이지 (support)
+    - HTML5: 오류 수정
+    - CSS3: 정리 및 수정
+    - JavaScript/jQuery: FAQ 아코디언 메뉴 수정
 
 <br>
 copyright (c) 2020 Ji Hye LEE
